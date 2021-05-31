@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500&family=Inter:wght@300;400;500&display=swap');
+
+body{
+    margin: 0px;
+    box-sizing: border-box;
+}
+:root{
+    --background:#f8f8f8;
+    --title:#143774;
+    --subtitle:#1792d2;
+    --Barlow:"Barlow",sans-serif;
+    --Inter:"Inter",sans-serif;
+}
+header{
+    text-align: center;
+    background: var(--background);
+    padding: 2rem 0;
+    margin-bottom:2rem;
+}
+footer{
+    background:#143774;
+    color: white;
+    padding: 3rem;
+    text-align: center;
+}
+img{
+    max-width: 100%;
+    display: block;
+}
+.container{
+    width: 85%;
+    margin: 0 auto;
+}
+.container_flex{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+h1{
+    font-family: var(--Barlow);
+    color:var(--title);
+    font-size: 2rem;
+    margin: 0px;
+}
+h2{
+    margin-top: 0px;
+    color: var(--title);
+    font-family: var(--Inter);
+    text-transform: capitalize;
+}
+h3{
+    color: var(--subtitle);
+    font-weight: 300;
+    font-family: var(--Inter);
+    text-transform: capitalize;
+}
+
+.subtitle{
+    font-weight: bold;
+    color: var(--subtitle);
+    margin: 0px;
+}
+/*basic style typography*/
+.article_title{
+    color: var(--title);
+    font-size: 1.5rem;
+}
+.article_read_more,
+.article_info{
+    font-size: .875rem;
+}
+.article_read_more{
+    color: var(--subtitle);
+    text-decoration: none;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.article_info{
+    margin: 2rem 0
+}
+.article_read_more:hover,
+.article_read_more:focus{
+    color: var(--title);
+}
+.widget_title{
+    text-transform: uppercase;
+}
+.current-page {
+    border-bottom: 1px solid #707070;
+    padding-bottom: 3px;
+}
+
+.current-page:hover {
+    color: var(--subtitle);
+}
+.image-full {
+    max-height: 350px;
+    width: 100%;
+    object-fit: cover;
+    margin-bottom: 2em;
+}
+
+
+/*typography of main section ends here*/
+
+nav ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    padding-left: 0px;
+}
+nav li{
+        margin: .5rem 0;
+    }
+nav a{
+    color: #707070;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.3rem;
+}
+nav a:hover,
+nav a:focus{
+    color:var(--subtitle);
+}
+.column i{
+    padding-right: 0.5rem;
+    color: white;
+}
+/*main content codes start here*/
+@media (min-width:675px){
+    .container_flex{
+        flex-direction: row;
+    }
+    nav ul{
+    flex-direction: row;
+    }
+    nav ul li{
+        margin-left: 1rem;
+    }
+    main{
+        width: 70%;
+    }
+    aside{
+        width: 25%;
+        min-width: 200px;
+        margin-left: 1rem;
+    }
+
+}
+@media screen and (max-width:674px){
+    nav ul{
+    flex-direction: column;
+ }
+}
+
+.feature_article{
+    border-bottom: #707070 1px solid;
+    padding-bottom: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.recent_article{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 2em;
+ } 
+.recent_article_main{
+    order: 2;
+}
+.recent_article_secondary{
+    order: 1;
+}
+@media (min-width:675px){
+    .recent_article{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+ }
+    .recent_article_main {
+        width: 68%;
+    }
+    
+    .recent_article_secondary{
+        width: 30%;
+    }
+     .feature_article {
+        display: flex;
+        flex-direction: column;
+    }
+    .article_image{
+        width: 100%;
+        min-height: 250px;
+        object-fit: cover;
+        order: -2;
+    }
+    .article_info{
+        order: -1;
+    }
+}
+
+/*widget codes*/
+.sideber_widget{
+    border: 20px solid #efefef;
+    margin-bottom: 2em;
+    padding: 1em;
+}
+.widget_title{
+    color:var(--title); 
+}
+
+.widget_recent_post{
+    display:flex;
+    flex-direction: column; 
+    border-bottom: #707070 1px solid;
+    margin-bottom: 1rem;
+}
+.widget_recent_post_title{
+    color: var(--subtitle);
+    font-weight: 300;
+    order:-2;
+}
+.widget_image{
+    order:-3;
+}
+.widget_recent_post:last-child{
+    margin-bottom: 0;
+    border-bottom: 0;
+}
